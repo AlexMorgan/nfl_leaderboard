@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Leaderboard</title>
+    <!-- <link rel="stylesheet" href="home.css" /> -->
+  </head>
+
+  <body>
+    <h1>NFL Leaderboard</h1>
+    <ul>
+      <% @standings.each do |key, value| %>
+        <li> <a href="<%= "/teams/#{key}" %>"><%= "#{key}: #{value["wins"]} - #{value["losses"]} " %></a></li>
+      <% end %>
+    </ul>
+  </body>
+</html>

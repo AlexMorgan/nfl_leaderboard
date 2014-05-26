@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NFL Leaderboard</title>
+    <!-- <link rel="stylesheet" href="home.css" /> -->
+  </head>
+
+  <body>
+    <h1> <%= params[:key] %></h1>
+    <p><%= " Record: #{@team["wins"]} - #{@team["losses"]}" %></p>
+    <h4>Games Played:</h4>
+    <% @games.each do |game| %>
+      <p><%= "Home - #{game[:home_team]}: #{game[:home_score]} | Away - #{game[:away_team]}: #{game[:away_score]} " %></p>
+    <% end %>
+    <p><%= "" %></p>
+    <p><%= "" %></p>
+    <button> <a href="/">Home</a></button>
+  </body>
+</html>
